@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: red;
+    --border-radius: 10px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.progress {
+    padding: 0 2px;
+    position: relative;
+    height: 2px;
+}
+
+.progress span {
+    position: absolute;
+    content: ' ';
+    background: var(--color-bg);
+    width: 5%;
+    height: 100%;
+}
+
+.card {
+    border: 1px solid #d2d2d2;
+    min-width: 60%;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    background-size: cover;
+    height: 200px;
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+.card-title h1 {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+}
+
+.card-footer {
+    background-color: #eee;
+    padding: 1rem;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: -80px auto 10px;
+    position: relative;
+}
+
+.avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+}
+
+.grid .row {
+    display: flex;
+}
+
+.grid .row>div {
+    flex-basis: 100%;
+}
+
+.grid .row>div label {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 0.3em;
+    border-style: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #e93939;
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+input {
+    border: 1px solid #eee;
+}
+
+input:focus {
+    background-color: rgba(0, 255, 42, 0.1) !important;
+    transition: border-color ease-in-out .5s,
+        background-color ease-in-out .5s;
+}
+
+button:hover {
+    background-color: #b92626;
+}
+
+button:active {
+    outline: none;
+    background-color: #e65a5a;
+}
+
+input[required]:placeholder-shown {
+    border-color: rgba(255, 0, 0, 0.05) !important;
+    background-color: rgba(255, 0, 0, 0.05);
+    border-bottom: 2px solid rgba(255, 0, 0, 0.2) !important;
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
