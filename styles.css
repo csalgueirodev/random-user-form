@@ -111,16 +111,6 @@ input {
     border-style: none;
 }
 
-.btn {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border: none;
-    background-color: #e93939;
-    color: white;
-    border-radius: var(--border-radius);
-}
-
 input:focus,
 button:focus {
     outline: none;
@@ -136,15 +126,26 @@ input:focus {
         background-color ease-in-out .5s;
 }
 
-button:hover {
+.btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #e93939;
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+.btn:hover {
     background-color: #b92626;
 }
 
-button:active {
+.btn:active {
     outline: none;
     background-color: #e65a5a;
 }
 
+/*css trick to show background on required fields not yet filled*/
 input[required]:placeholder-shown {
     border-color: rgba(255, 0, 0, 0.05) !important;
     background-color: rgba(255, 0, 0, 0.05);
