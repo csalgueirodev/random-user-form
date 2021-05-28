@@ -16,18 +16,19 @@ body {
     padding: 0;
 }
 
-.progress {
-    padding: 0 2px;
-    position: relative;
-    height: 2px;
+.progress.show {
+    display: flex;
 }
 
-.progress span {
+.progress {
+    display: none;
     position: absolute;
-    content: ' ';
-    background: var(--color-bg);
-    width: 5%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -84,10 +85,12 @@ body {
 
 .grid .row {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem
 }
 
 .grid .row>div {
-    flex-basis: 100%;
+    flex: 1 1 0;
 }
 
 .grid .row>div label {

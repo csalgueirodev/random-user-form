@@ -12,7 +12,6 @@
 
 <body>
     <div class="card">
-        <!-- <div class="progress"><span></span></div> -->
         <div class="card-title" style="background: url(https://picsum.photos/500/300);">
             <h1>Random User Generator</h1>
         </div>
@@ -34,12 +33,16 @@
                     <input type="text" name="email" placeholder=" " required>
                 </div>
                 <div>
-                    <label for="">Username</label>
-                    <input type="username" name="username" placeholder=" ">
-                </div>
-                <div>
-                    <label for="">Password</label>
-                    <input type="password" name="password" placeholder=" ">
+                    <div class="row">
+                        <div>
+                            <label for="">Username</label>
+                            <input type="username" name="username" placeholder=" ">
+                        </div>
+                        <div>
+                            <label for="">Password</label>
+                            <input type="password" name="password" placeholder=" ">
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <label for="">Age</label>
@@ -78,6 +81,7 @@
             <button class="btn" id="btn-generator">Generate Random User</button>
         </div>
     </div>
+    <div class="progress">Generating user...</div>
 </body>
 
 </html>

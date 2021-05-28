@@ -13,9 +13,12 @@ animateText(btn);
 btn.addEventListener("click", fetchRandomUser)
 
 function fetchRandomUser() {
-    fetch()
+    progress.classList.add("show")
+    fetch(API_URL)
         .then(response => response.json())
         .then(data => {
+            progress.classList.remove("show")
+
             const userData = apiToUserData(data.results[0])
             Object.keys(userData).forEach(key => {
                 setValueToInput(key, userData)
