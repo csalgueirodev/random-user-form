@@ -1,6 +1,7 @@
 const API_URL = 'https://randomuser.me/api/?inc=gender,name,dob,phone,picture,login,email,location';
 const btn = document.querySelector("#btn-generator")
 const progress = document.querySelector(".progress")
+const cardTitle = document.querySelector(".card-title")
 const span = document.querySelector(".progress > span")
 const title = document.querySelector(".card-title > h1")
 const animationTime = 200;
@@ -15,6 +16,7 @@ btn.addEventListener("click", fetchRandomUser)
 
 function fetchRandomUser() {
     progress.classList.add("show")
+    cardTitle.style.background = `url(https://picsum.photos/500/300?t=${+ new Date()})`
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
@@ -50,14 +52,14 @@ function animateText(element) {
     element.textContent = ""
     const arrayText = stringText.split("")
     let text = "";
-    arrayText.forEach((el, idx) => {
-        (function (i) {
+    for (let i = 0; i < arrayText.length; i++) {
+        (function (idx) {
             return setTimeout(function () {
                 text += arrayText[i]
                 element.textContent = text
-            }, i * animationTime)
-        }(idx))
-    })
+            }, idx * (animationTime / 2))
+        }(i))
+    }
 }
 
 function animateInputValue(input, value) {
