@@ -3,8 +3,8 @@
 }
 
 :root {
-    --color-bg: red;
     --border-radius: 10px;
+    --btn-color:#e93939;
 }
 
 body {
@@ -109,12 +109,14 @@ body {
     flex: 1 1 0;
 }
 
-.grid .row>div label {
+.grid .radio-group>div label {
     display: flex;
     align-items: center;
 }
 
 label {
+    display: block;
+    width: 100%;
     font-size: 0.8rem;
 }
 
@@ -150,7 +152,7 @@ input:focus {
     padding: 1rem;
     font-size: 1rem;
     border: none;
-    background-color: #e93939;
+    background-color: var(--btn-color);
     color: white;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -175,6 +177,13 @@ input[required]:placeholder-shown {
     border-bottom: 2px solid rgba(255, 0, 0, 0.2) !important;
 }
 
+.linkBtn{
+    text-decoration: none;
+    color: var(--btn-color);
+}
+.float-right{
+    float: right;
+}
 
 @keyframes fadeInDown {
     from {

@@ -1,5 +1,6 @@
 const API_URL = 'https://randomuser.me/api/?inc=gender,name,dob,phone,picture,login,email,location';
 const btn = document.querySelector("#btn-generator")
+const togglePassword = document.querySelector("#togglePassword")
 const progress = document.querySelector(".progress")
 const cardTitle = document.querySelector(".card-title")
 const span = document.querySelector(".progress > span")
@@ -11,6 +12,18 @@ fetchRandomUser();
 animateText(title);
 animateText(btn);
 
+togglePassword.addEventListener("click", e => {
+    const togglePasswordButton = e.target;
+    const input = e.target.closest("div").querySelector("input[name='password']");
+    if (input.type === "password") {
+        input.setAttribute("type", "text")
+        togglePasswordButton.textContent = "Hide"
+    } else {
+        input.setAttribute("type", "password")
+        togglePasswordButton.textContent = "Reveal"
+    }
+    input
+})
 btn.addEventListener("mousedown", createRipple)
 btn.addEventListener("click", fetchRandomUser)
 
