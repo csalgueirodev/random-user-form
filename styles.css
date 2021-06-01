@@ -8,13 +8,17 @@
 }
 
 body {
-    background: linear-gradient(to bottom right, #0040a7, #530c0c);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
     height: 100vh;
+    
+    background: linear-gradient(132deg, #025f30, #0040a7, #530c0c);
+    background-size: 400% 400%;
+    -webkit-animation: bgLoop 10s ease infinite;
+    animation: bgLoop 10s ease infinite; 
 }
 
 .progress.show {
@@ -232,5 +236,22 @@ span.ripple {
     to {
         transform: scale(4);
         opacity: 0;
+    }
+}
+@keyframes bgLoop {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

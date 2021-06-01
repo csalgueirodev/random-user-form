@@ -81,9 +81,6 @@ function setValueToInput(key, userData) {
     if (input != null) {
         if (input.getAttribute("type") === "radio") {
             const radios = document.querySelectorAll(`[name=${key}]`)
-            radios.forEach(r => {
-                r.setAttribute("checked", false)
-            })
             document.querySelector(`[name=${key}][value=${userData[key]}]`).checked = true
         } else {
             if (animateInputs) {
