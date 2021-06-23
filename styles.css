@@ -69,7 +69,6 @@ body {
 
 .avatar {
     width: 8rem;
-    height: 8rem;
     left: 0;
     position: absolute;
     width: 100%;
@@ -86,7 +85,6 @@ body {
 }
 
 .card-body {
-    padding: 2rem;
     padding-top: 3rem;
     min-height: 28rem;
     width: 25rem;
@@ -97,6 +95,7 @@ body {
     display: grid;
     width: 100%;
     grid-gap: 10px;
+    margin: 2rem;
 }
 
 .grid .row {
